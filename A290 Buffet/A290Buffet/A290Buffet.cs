@@ -15,7 +15,6 @@ namespace A290Buffet
         public A290Buffet()
         {
             InitializeComponent();
-            
         }
 
         private void frmBuffet_Load(object sender, EventArgs e)
