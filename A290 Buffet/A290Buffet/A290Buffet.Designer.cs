@@ -38,6 +38,7 @@
             this.btnDrawBorder = new System.Windows.Forms.Button();
             this.lblX = new System.Windows.Forms.Label();
             this.lblY = new System.Windows.Forms.Label();
+            this.btnOptions = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picShowPicture)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +54,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Location = new System.Drawing.Point(294, 70);
+            this.btnQuit.Location = new System.Drawing.Point(294, 100);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(85, 23);
             this.btnQuit.TabIndex = 1;
@@ -111,7 +112,7 @@
             // lblX
             // 
             this.lblX.AutoSize = true;
-            this.lblX.Location = new System.Drawing.Point(300, 110);
+            this.lblX.Location = new System.Drawing.Point(300, 125);
             this.lblX.Name = "lblX";
             this.lblX.Size = new System.Drawing.Size(14, 13);
             this.lblX.TabIndex = 6;
@@ -120,17 +121,28 @@
             // lblY
             // 
             this.lblY.AutoSize = true;
-            this.lblY.Location = new System.Drawing.Point(300, 125);
+            this.lblY.Location = new System.Drawing.Point(300, 140);
             this.lblY.Name = "lblY";
             this.lblY.Size = new System.Drawing.Size(14, 13);
             this.lblY.TabIndex = 7;
             this.lblY.Text = "Y";
+            // 
+            // btnOptions
+            // 
+            this.btnOptions.Location = new System.Drawing.Point(294, 70);
+            this.btnOptions.Name = "btnOptions";
+            this.btnOptions.Size = new System.Drawing.Size(85, 23);
+            this.btnOptions.TabIndex = 8;
+            this.btnOptions.Text = "Options";
+            this.btnOptions.UseVisualStyleBackColor = true;
+            this.btnOptions.Click += new System.EventHandler(this.btnOptions_Click);
             // 
             // A290Buffet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(384, 286);
+            this.Controls.Add(this.btnOptions);
             this.Controls.Add(this.lblY);
             this.Controls.Add(this.lblX);
             this.Controls.Add(this.btnDrawBorder);
@@ -160,6 +172,7 @@
         private System.Windows.Forms.Button btnDrawBorder;
         private System.Windows.Forms.Label lblX;
         private System.Windows.Forms.Label lblY;
+        private System.Windows.Forms.Button btnOptions;
     }
 }
 

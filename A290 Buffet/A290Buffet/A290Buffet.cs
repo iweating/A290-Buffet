@@ -80,5 +80,11 @@ namespace A290Buffet
             lblY.Text = "";
         }
 
+        private void btnOptions_Click(object sender, EventArgs e)
+        {
+            frmBuffetOptions frmBuffetOptionsDialog = new frmBuffetOptions();
+            frmBuffetOptionsDialog.ShowDialog();
+        }
+
     }
 }
