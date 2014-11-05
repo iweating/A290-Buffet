@@ -20,6 +20,8 @@ namespace A290Buffet
 
         private void frmBuffet_Load(object sender, EventArgs e)
         {
+            lblX.Text = "";
+            lblY.Text = "";
         }
 
         private void btnSelectPicture_Click(object sender, EventArgs e)
@@ -65,6 +67,18 @@ namespace A290Buffet
                 picShowPicture.Width+1,picShowPicture.Height+1);
 
             objDrawBorder.Dispose();
+        }
+
+        private void picShowPicture_MouseMove(object sender, MouseEventArgs e)
+        {
+            lblX.Text = "X: " + e.X.ToString();
+            lblY.Text = "Y: " + e.Y.ToString();
+        }
+
+        private void picShowPicture_MouseLeave(object sender, EventArgs e)
+        {
+            lblX.Text = "";
+            lblY.Text = "";
         }
 
     }
