@@ -1,4 +1,16 @@
-﻿using System;
+﻿/**********************************************************
+* A290Buffet.cs
+*
+* These definitions set up the I/O interface for the PowerBox.
+*
+* Author: ---
+* Date Created: ---
+* Last Modified by: ---
+* Date Last Modified: ---
+* Assignment: ---
+* Part of: ---
+*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
