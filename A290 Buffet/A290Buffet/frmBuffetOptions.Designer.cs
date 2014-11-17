@@ -33,12 +33,11 @@
             this.lblUserName = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
             this.grpDefaultBackgroundColor = new System.Windows.Forms.GroupBox();
-            this.cboBorderColors = new System.Windows.Forms.ComboBox();
-            this.optBackgroundRed = new System.Windows.Forms.RadioButton();
-            this.optBackgroundBlue = new System.Windows.Forms.RadioButton();
-            this.optBackgroundGreen = new System.Windows.Forms.RadioButton();
             this.optBackgoundDefault = new System.Windows.Forms.RadioButton();
-            this.chkPromptExit = new System.Windows.Forms.CheckBox();
+            this.optBackgroundGreen = new System.Windows.Forms.RadioButton();
+            this.optBackgroundBlue = new System.Windows.Forms.RadioButton();
+            this.optBackgroundRed = new System.Windows.Forms.RadioButton();
+            this.cboBorderColors = new System.Windows.Forms.ComboBox();
             this.grpDefaultBackgroundColor.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,6 +95,62 @@
             this.grpDefaultBackgroundColor.TabStop = false;
             this.grpDefaultBackgroundColor.Text = "Default Picture Backgound Color";
             // 
+            // optBackgoundDefault
+            // 
+            this.optBackgoundDefault.AutoSize = true;
+            this.optBackgoundDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optBackgoundDefault.ForeColor = System.Drawing.Color.Black;
+            this.optBackgoundDefault.Location = new System.Drawing.Point(6, 94);
+            this.optBackgoundDefault.Name = "optBackgoundDefault";
+            this.optBackgoundDefault.Size = new System.Drawing.Size(66, 17);
+            this.optBackgoundDefault.TabIndex = 3;
+            this.optBackgoundDefault.TabStop = true;
+            this.optBackgoundDefault.Text = "Default";
+            this.optBackgoundDefault.UseVisualStyleBackColor = true;
+            this.optBackgoundDefault.CheckedChanged += new System.EventHandler(this.optBackgoundDefault_CheckedChanged);
+            // 
+            // optBackgroundGreen
+            // 
+            this.optBackgroundGreen.AutoSize = true;
+            this.optBackgroundGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optBackgroundGreen.ForeColor = System.Drawing.Color.Green;
+            this.optBackgroundGreen.Location = new System.Drawing.Point(6, 73);
+            this.optBackgroundGreen.Name = "optBackgroundGreen";
+            this.optBackgroundGreen.Size = new System.Drawing.Size(59, 17);
+            this.optBackgroundGreen.TabIndex = 2;
+            this.optBackgroundGreen.TabStop = true;
+            this.optBackgroundGreen.Text = "Green";
+            this.optBackgroundGreen.UseVisualStyleBackColor = true;
+            this.optBackgroundGreen.CheckedChanged += new System.EventHandler(this.optBackgroundGreen_CheckedChanged);
+            // 
+            // optBackgroundBlue
+            // 
+            this.optBackgroundBlue.AutoSize = true;
+            this.optBackgroundBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optBackgroundBlue.ForeColor = System.Drawing.Color.Blue;
+            this.optBackgroundBlue.Location = new System.Drawing.Point(6, 50);
+            this.optBackgroundBlue.Name = "optBackgroundBlue";
+            this.optBackgroundBlue.Size = new System.Drawing.Size(50, 17);
+            this.optBackgroundBlue.TabIndex = 1;
+            this.optBackgroundBlue.TabStop = true;
+            this.optBackgroundBlue.Text = "Blue";
+            this.optBackgroundBlue.UseVisualStyleBackColor = true;
+            this.optBackgroundBlue.CheckedChanged += new System.EventHandler(this.optBackgroundBlue_CheckedChanged);
+            // 
+            // optBackgroundRed
+            // 
+            this.optBackgroundRed.AutoSize = true;
+            this.optBackgroundRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.optBackgroundRed.ForeColor = System.Drawing.Color.Red;
+            this.optBackgroundRed.Location = new System.Drawing.Point(6, 31);
+            this.optBackgroundRed.Name = "optBackgroundRed";
+            this.optBackgroundRed.Size = new System.Drawing.Size(48, 17);
+            this.optBackgroundRed.TabIndex = 0;
+            this.optBackgroundRed.TabStop = true;
+            this.optBackgroundRed.Text = "Red";
+            this.optBackgroundRed.UseVisualStyleBackColor = true;
+            this.optBackgroundRed.CheckedChanged += new System.EventHandler(this.optBackgroundRed_CheckedChanged);
+            // 
             // cboBorderColors
             // 
             this.cboBorderColors.FormattingEnabled = true;
@@ -112,73 +167,6 @@
             this.cboBorderColors.Text = "Border Colors";
             this.cboBorderColors.SelectedIndexChanged += new System.EventHandler(this.cboBorderColors_SelectedIndexChanged);
             // 
-            // optBackgroundRed
-            // 
-            this.optBackgroundRed.AutoSize = true;
-            this.optBackgroundRed.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optBackgroundRed.ForeColor = System.Drawing.Color.Red;
-            this.optBackgroundRed.Location = new System.Drawing.Point(6, 31);
-            this.optBackgroundRed.Name = "optBackgroundRed";
-            this.optBackgroundRed.Size = new System.Drawing.Size(48, 17);
-            this.optBackgroundRed.TabIndex = 0;
-            this.optBackgroundRed.TabStop = true;
-            this.optBackgroundRed.Text = "Red";
-            this.optBackgroundRed.UseVisualStyleBackColor = true;
-            this.optBackgroundRed.CheckedChanged += new System.EventHandler(this.optBackgroundRed_CheckedChanged);
-            // 
-            // optBackgroundBlue
-            // 
-            this.optBackgroundBlue.AutoSize = true;
-            this.optBackgroundBlue.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optBackgroundBlue.ForeColor = System.Drawing.Color.Blue;
-            this.optBackgroundBlue.Location = new System.Drawing.Point(6, 50);
-            this.optBackgroundBlue.Name = "optBackgroundBlue";
-            this.optBackgroundBlue.Size = new System.Drawing.Size(50, 17);
-            this.optBackgroundBlue.TabIndex = 1;
-            this.optBackgroundBlue.TabStop = true;
-            this.optBackgroundBlue.Text = "Blue";
-            this.optBackgroundBlue.UseVisualStyleBackColor = true;
-            this.optBackgroundBlue.CheckedChanged += new System.EventHandler(this.optBackgroundBlue_CheckedChanged);
-            // 
-            // optBackgroundGreen
-            // 
-            this.optBackgroundGreen.AutoSize = true;
-            this.optBackgroundGreen.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optBackgroundGreen.ForeColor = System.Drawing.Color.Green;
-            this.optBackgroundGreen.Location = new System.Drawing.Point(6, 73);
-            this.optBackgroundGreen.Name = "optBackgroundGreen";
-            this.optBackgroundGreen.Size = new System.Drawing.Size(59, 17);
-            this.optBackgroundGreen.TabIndex = 2;
-            this.optBackgroundGreen.TabStop = true;
-            this.optBackgroundGreen.Text = "Green";
-            this.optBackgroundGreen.UseVisualStyleBackColor = true;
-            this.optBackgroundGreen.CheckedChanged += new System.EventHandler(this.optBackgroundGreen_CheckedChanged);
-            // 
-            // optBackgoundDefault
-            // 
-            this.optBackgoundDefault.AutoSize = true;
-            this.optBackgoundDefault.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.optBackgoundDefault.ForeColor = System.Drawing.Color.Black;
-            this.optBackgoundDefault.Location = new System.Drawing.Point(6, 94);
-            this.optBackgoundDefault.Name = "optBackgoundDefault";
-            this.optBackgoundDefault.Size = new System.Drawing.Size(66, 17);
-            this.optBackgoundDefault.TabIndex = 3;
-            this.optBackgoundDefault.TabStop = true;
-            this.optBackgoundDefault.Text = "Default";
-            this.optBackgoundDefault.UseVisualStyleBackColor = true;
-            this.optBackgoundDefault.CheckedChanged += new System.EventHandler(this.optBackgoundDefault_CheckedChanged);
-            // 
-            // chkPromptExit
-            // 
-            this.chkPromptExit.AutoSize = true;
-            this.chkPromptExit.Location = new System.Drawing.Point(151, 226);
-            this.chkPromptExit.Name = "chkPromptExit";
-            this.chkPromptExit.Size = new System.Drawing.Size(100, 17);
-            this.chkPromptExit.TabIndex = 6;
-            this.chkPromptExit.Text = "Prompt on Exit?";
-            this.chkPromptExit.UseVisualStyleBackColor = true;
-            this.chkPromptExit.CheckedChanged += new System.EventHandler(this.chkPromptExit_CheckedChanged);
-            // 
             // frmBuffetOptions
             // 
             this.AcceptButton = this.btnOK;
@@ -187,7 +175,6 @@
             this.BackColor = System.Drawing.Color.Gray;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.chkPromptExit);
             this.Controls.Add(this.cboBorderColors);
             this.Controls.Add(this.grpDefaultBackgroundColor);
             this.Controls.Add(this.txtUserName);
@@ -200,8 +187,6 @@
             this.Name = "frmBuffetOptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A290 Buffet Options";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBuffetOptions_FormClosing);
-            this.Load += new System.EventHandler(this.frmBuffetOptions_Load);
             this.grpDefaultBackgroundColor.ResumeLayout(false);
             this.grpDefaultBackgroundColor.PerformLayout();
             this.ResumeLayout(false);
@@ -221,6 +206,5 @@
         private System.Windows.Forms.RadioButton optBackgroundGreen;
         private System.Windows.Forms.RadioButton optBackgroundBlue;
         private System.Windows.Forms.RadioButton optBackgroundRed;
-        private System.Windows.Forms.CheckBox chkPromptExit;
     }
 }

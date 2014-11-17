@@ -19,6 +19,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Collections;
 
 namespace A290Buffet
 {
@@ -28,11 +29,13 @@ namespace A290Buffet
         {
             InitializeComponent();
         }
-
+        const bool defPromptOnExit = true;
+        bool blnPromptOnExit = defPromptOnExit;
         private void frmBuffet_Load(object sender, EventArgs e)
         {
             lblX.Text = "";
             lblY.Text = "";
+            chkPromptExit.Checked = blnPromptOnExit;
         }
 
         private void btnSelectPicture_Click(object sender, EventArgs e)
@@ -55,29 +58,20 @@ namespace A290Buffet
         {
             this.Width = this.Width + 20;
             this.Height = this.Height + 20;
-            
+
+            drawBorder();
         }
 
         private void btnShrink_Click(object sender, EventArgs e)
         {
-            if (this.Height > 325 && this.Width > 400)
-            {
-                this.Width = this.Width - 20;
-                this.Height = this.Height - 20;
-            }
+            this.Width = this.Width - 20;
+            this.Height = this.Height - 20;
+            drawBorder();
         }
 
         private void btnDrawBorder_Click(object sender, EventArgs e)
         {
-            Graphics objDrawBorder = null;
-            objDrawBorder = this.CreateGraphics();
-            objDrawBorder.Clear(SystemColors.Control);
-
-            objDrawBorder.DrawRectangle(Pens.Blue,
-                picShowPicture.Left-1,picShowPicture.Top-1,
-                picShowPicture.Width+1,picShowPicture.Height+1);
-
-            objDrawBorder.Dispose();
+            drawBorder();
         }
 
         private void picShowPicture_MouseMove(object sender, MouseEventArgs e)
@@ -96,6 +90,53 @@ namespace A290Buffet
         {
             frmBuffetOptions frmBuffetOptionsDialog = new frmBuffetOptions();
             frmBuffetOptionsDialog.ShowDialog();
+        }
+
+        private void chkPromptExit_CheckedChanged(object sender, EventArgs e)
+        {
+            blnPromptOnExit = (chkPromptExit.Checked);
+        }
+
+        private void A290Buffet_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (blnPromptOnExit)
+            {
+                //if box is checked
+                if (MessageBox.Show("Close the Buffet Program?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    if (MessageBox.Show("Close the Buffet Program?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        if (MessageBox.Show("Close the Buffet Program?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                {
+                    //Display a dialog with Yes/No buttons that asks "Close the Buffet Program?,
+                    //uses the "?" icon, and has the caption "Confirm Exit"
+                    //If the user selects "No", then
+                    e.Cancel = true;
+                }
+                //otherwise, close the application
+            }
+        }
+
+        private void btnCollections_Click(object sender, EventArgs e)
+        {
+            frmCollections frmCollectionsDialog = new frmCollections();
+            frmCollectionsDialog.ShowDialog();
+        }
+
+        private void A290Buffet_ResizeEnd(object sender, EventArgs e)
+        {
+            drawBorder();
+        }
+
+        private void drawBorder()
+        {
+            Graphics objDrawBorder = null;
+            objDrawBorder = this.CreateGraphics();
+            objDrawBorder.Clear(SystemColors.Control);
+
+            objDrawBorder.DrawRectangle(Pens.Blue,
+                picShowPicture.Left - 1, picShowPicture.Top - 1,
+                picShowPicture.Width + 1, picShowPicture.Height + 1);
+
+            objDrawBorder.Dispose();
         }
 
     }

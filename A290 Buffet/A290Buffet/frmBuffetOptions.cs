@@ -94,32 +94,5 @@ namespace A290Buffet
                     break;
             }
         }
-
-        private void chkPromptExit_CheckedChanged(object sender, EventArgs e)
-        {
-            blnPromptOnExit = (chkPromptExit.Checked);
-        }
-
-        private void frmBuffetOptions_Load(object sender, EventArgs e)
-        {
-            //make our checkbox and boolean match values
-            chkPromptExit.Checked = blnPromptOnExit;
-        }
-
-        private void frmBuffetOptions_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (blnPromptOnExit)
-            { 
-                //if box is checked
-                if (MessageBox.Show("Close the Buffet Program?", "Confirm Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
-                {
-                    //Display a dialog with Yes/No buttons that asks "Close the Buffet Program?,
-                    //uses the "?" icon, and has the caption "Confirm Exit"
-                    //If the user selects "No", then
-                    e.Cancel = true;
-                }
-                //otherwise, close the application
-            }
-        }
     }
 }
