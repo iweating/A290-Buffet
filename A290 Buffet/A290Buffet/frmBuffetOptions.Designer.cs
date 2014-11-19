@@ -184,10 +184,9 @@
             this.AcceptButton = this.btnOK;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.BackColor = System.Drawing.Color.Gray;
             this.CancelButton = this.btnCancel;
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.chkPromptExit);
             this.Controls.Add(this.cboBorderColors);
             this.Controls.Add(this.grpDefaultBackgroundColor);
             this.Controls.Add(this.txtUserName);
@@ -200,8 +199,6 @@
             this.Name = "frmBuffetOptions";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "A290 Buffet Options";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmBuffetOptions_FormClosing);
-            this.Load += new System.EventHandler(this.frmBuffetOptions_Load);
             this.grpDefaultBackgroundColor.ResumeLayout(false);
             this.grpDefaultBackgroundColor.PerformLayout();
             this.ResumeLayout(false);
@@ -221,6 +218,5 @@
         private System.Windows.Forms.RadioButton optBackgroundGreen;
         private System.Windows.Forms.RadioButton optBackgroundBlue;
         private System.Windows.Forms.RadioButton optBackgroundRed;
-        private System.Windows.Forms.CheckBox chkPromptExit;
     }
 }

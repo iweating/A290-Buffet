@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "A290Buffet", "A290Buffet\A290Buffet.csproj", "{2CE809ED-5DC9-46C1-B85D-0A1E477A8DE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Collections", "..\..\A290Collections\Collections\Collections.csproj", "{EF22C56D-CE9F-43EF-89EA-758007F912D0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2CE809ED-5DC9-46C1-B85D-0A1E477A8DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2CE809ED-5DC9-46C1-B85D-0A1E477A8DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2CE809ED-5DC9-46C1-B85D-0A1E477A8DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF22C56D-CE9F-43EF-89EA-758007F912D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF22C56D-CE9F-43EF-89EA-758007F912D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF22C56D-CE9F-43EF-89EA-758007F912D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF22C56D-CE9F-43EF-89EA-758007F912D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
