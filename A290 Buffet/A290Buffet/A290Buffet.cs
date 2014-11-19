@@ -19,6 +19,7 @@ namespace A290Buffet
 
         private void frmBuffet_Load(object sender, EventArgs e)
         {
+            //Initialize the labels to be empty  on form load
             lblX.Text = "";
             lblY.Text = "";
         }
@@ -41,6 +42,7 @@ namespace A290Buffet
 
         private void btnEnlarge_Click(object sender, EventArgs e)
         {
+            //Increase height and width of form by 20 pixels
             this.Width = this.Width + 20;
             this.Height = this.Height + 20;
             
@@ -48,15 +50,14 @@ namespace A290Buffet
 
         private void btnShrink_Click(object sender, EventArgs e)
         {
-            if (this.Height > 325 && this.Width > 400)
-            {
-                this.Width = this.Width - 20;
-                this.Height = this.Height - 20;
-            }
+            //Decrease height and width of form by 20 pixels
+            this.Width = this.Width - 20;
+            this.Height = this.Height - 20;
         }
 
         private void btnDrawBorder_Click(object sender, EventArgs e)
         {
+            //Create a rectangle "border" roughly the same size as the picture box
             Graphics objDrawBorder = null;
             objDrawBorder = this.CreateGraphics();
             objDrawBorder.Clear(SystemColors.Control);
@@ -70,12 +71,14 @@ namespace A290Buffet
 
         private void picShowPicture_MouseMove(object sender, MouseEventArgs e)
         {
+            //Display the x and y coordinates when hovering over the picture box
             lblX.Text = "X: " + e.X.ToString();
             lblY.Text = "Y: " + e.Y.ToString();
         }
 
         private void picShowPicture_MouseLeave(object sender, EventArgs e)
         {
+            //Reset the labels to empty
             lblX.Text = "";
             lblY.Text = "";
         }
